@@ -1,9 +1,11 @@
+Code.require_file "./mixtools.exs"
+
 defmodule AppOne.Mixfile do
   use Mix.Project
 
   def project do
     [app: :app_one,
-     version: "0.0.1",
+     version: AppOne.MixTools.get_version,
      deps_path: "../../deps",
      lockfile: "../../mix.lock",
      elixir: "~> 1.0",
